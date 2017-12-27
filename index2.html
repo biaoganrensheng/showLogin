@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台登录</title>
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        html,body{
+            width: 100%;
+            height:100%;
+        }
+        .m-header{
+            position: fixed;
+            left:18.33%;
+            top:6.67%;
+            width:100%;
+            color:#027cf1;
+            background:url(images/logo.png) no-repeat left center;
+            height:60px;
+            line-height: 60px;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            padding-left: 60px;
+        }
+        .g-section{
+            width: 100%;
+            height: 59.26%;
+            position: relative;
+            top:14.59%;
+            left:0;
+            right:0;
+            background-color: #027cf1;
+        }
+        .g-footer{
+            font-size: 12px;
+            position: fixed;
+            bottom:20px;
+            text-align: center;
+            color:#ccc;
+            left:50%;
+            -webkit-transform:translateX(-50%);
+            -moz-transform:translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform:translateX(-50%);
+            transform: translateX(-50%);
+        }
+        .m-container{
+            width: 62.5%;
+            margin: 0 auto;
+            height:100%;
+        }
+        .m-img{
+            width:54.67%;
+            height:100%;
+            position: relative;
+            z-index: 1;
+        }
+        .m-img img{
+            position: absolute;
+            top:20px;
+            left:0;
+            z-index: 10;
+            width:98.17%;
+            height:100%;
+        }
+        .m-content{
+            width: 45.33%;
+            padding-left: 10.5%;
+            height:100%;
+        }
+        .content-box{
+            width: 93.38%;
+            height:79.38%;
+            background-color: #fff;
+            margin-top:12.5%;
+            border-radius: 6px;
+            padding:0 7.35%;
+        }
+        .content-box .login-img{
+            padding-top:14.6%;
+            text-align: center;
+        }
+        .login-input{
+            border:1px solid #f8f8f8;
+            padding-left:38px;
+            border-radius: 4px;
+            margin-top: 30px;
+            -webkit-box-shadow:1px 1px 2px #ccc;
+            -moz-box-shadow:1px 1px 2px #ccc;
+            box-shadow:1px 1px 2px #ccc;
+        }
+        .content-box input[type='text']{
+            width:100%;
+            height:44px;
+            border:0;
+            font-size: 14px;
+        }
+        .login-user{
+            background: url(images/user.png) no-repeat 10px center;
+        }
+        .login-pwd{
+            background: url(images/pwd.png) no-repeat 10px center;
+        }
+        .login-btn{
+            display: inline-block;
+            width: 100%;
+            height:44px;
+            border: none;
+            border-radius: 4px;
+            background-color: #027cf1;
+            color:#fff;
+            line-height: 44px;
+            margin-top: 40px;
+            font-size: 20px;
+            letter-spacing: 6px;
+            box-shadow: 0 0 4px #cdcdcd;
+        }
+    </style>
+</head>
+<body>
+<div class="g-index">
+    <div class="m-header">滩长助手管理系统</div>
+</div>
+<div class="g-section">
+    <div class="m-container">
+        <div class="m-img reset-lay-left">
+            <img src="images/show.png" alt="展示图">
+        </div>
+        <div class="m-content reset-lay-right">
+            <div class="content-box">
+                <div class="login-img">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+                <div class="login-input login-user">
+                    <input type="text" placeholder="请输入您的登录账号">
+                </div>
+                <div class="login-input login-pwd">
+                    <input type="text"  placeholder="请输入登录密码">
+                </div>
+                <div>
+                    <input class="login-btn" type="submit" value="登录">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="g-footer">
+    &copy;浙江省海洋渔业局
+</div>
+</body>
+</html>

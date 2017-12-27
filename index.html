@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>后台登录</title>
+    <link rel="shortcut icon" href="tz.ico" />
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="g-header">
+    <div class="reset-auto">
+        <span>滩长助手管理系统</span>
+    </div>
+</div>
+<div class="g-section">
+    <div class="reset-auto reset-lay">
+        <div class="m-nav-left reset-lay-left">
+            <img src="images/show.png" alt="展示">
+        </div>
+        <div class="m-nav-right reset-lay-right">
+            <div class="content-box">
+                <div class="login-img">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+                <form action="" id="login">
+                    <div class="login-input login-user">
+                        <input type="text" name="user" placeholder="请输入您的登录账号" class="user">
+                    </div>
+                    <div class="login-input login-pwd">
+                        <input type="password"  name="pwd" placeholder="请输入登录密码" class="pwd">
+                    </div>
+                    <div>
+                        <input class="login-btn" name="login" type="button" value="登录">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="g-footer">
+        &copy;浙江省海洋渔业局
+</div>
+<script>
+    $(".login-btn").click(function(){
+        var user=$(".user").val().trim();
+        var pwd=$(".pwd").val().trim();
+        if(user==""){
+            $(".login-input").eq(0).addClass("active");
+        }
+        if(pwd==""){
+            $(".login-input").eq(1).addClass("active");
+        }
+        if(user==""||pwd==""){
+            swal('提示', '用户名或密码有误,请重新输入!', 'error')
+        }
+    });
+    $(".login-input input").on("focus",function(){
+        $(this).parents(".login-input").removeClass("active");
+    })
+</script>
+</body>
+</html>
